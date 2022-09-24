@@ -1,11 +1,13 @@
 const router = require("express").Router()
 
-router.get("/", function(req, res){
-
-res.send("Places Index Page")
 
 
-})
+router.get('/', (req, res) => {
+    res.render('places/index')
+  })
+  
+
+
 
 
 module.exports = router
