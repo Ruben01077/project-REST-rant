@@ -22,7 +22,16 @@ app.get('/places', (req, res) => {
     state: 'AZ',
     cuisines: 'Coffee, Bakery',
     pic: 'http://placekitten.com/250/250'
+  },
+  {
+    name: 'Bakery',
+    city: 'Glendale',
+    state: 'CA',
+    cuisines: 'Resaurant, Bakery',
+    pic: 'http://placekitten.com/g/200/300'
   }]
+
+
   
 
   res.render('places/index', {places})

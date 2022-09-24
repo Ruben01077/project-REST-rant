@@ -14,18 +14,24 @@ function places () {
 
   function index (data) {
 
+    
 
-   
-
-    let placesFormatted = data.places.map((place) => {
+    let placesFormatted = data.places.map(function (place)  {
       return (
         
         <div>
-          <h2>{place.name}</h2>
+          <h2>Name: {place.name}</h2>
+          <h3>City: {place.city}</h3>
           <img src={place.pic} alt={place.name}/>
+
         </div>
+
+        
       )
+      
     })
+
+   
     return (
       <Def>
           <main>
@@ -34,6 +40,9 @@ function places () {
           </main>
       </Def>
   )
+
+  
+  
   }
   
   
