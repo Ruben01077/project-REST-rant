@@ -75,9 +75,9 @@ align-items: center;
 
 .place-images{
 
-  
- height: 340px;
- width: 450px;
+  height: 340px;
+  width: 550px;
+
  
 
 
@@ -89,5 +89,13 @@ align-items: center;
 display: grid;
 grid-template-columns: auto auto auto;
 justify-content: center;
+
+}
+
+.picture-div{
+
+  height: 340px;
+  width: 450px;
+  overflow: hidden;
 
 }

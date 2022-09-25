@@ -12,11 +12,13 @@ function index(data) {
 
 
 
-      <div class="container">
-        <div class="row">
-          <div class="col">   <h2>{place.name}</h2>
+      <div className="container">
+        <div className="row">
+          <div className="col">   <h2>{place.name}</h2>
             <p> {place.cuisines}</p>
-            <img className="place-images" src={place.pic} alt={place.name} />
+             <div className="picture-div">
+               <img className="place-images" src={place.pic} alt={place.name} />
+             </div>
             <p>Located in {place.city}</p>
           </div>
 
@@ -40,6 +42,12 @@ function index(data) {
         </div>
 
         <div className="grid-row">{placesFormatted}</div>
+        <a href="/places" className="aTag">
+                <button type="button" className="button">Places</button>
+                </a>
+                <a href="/places/new" className="aTag">
+                <button type="button" className="button">Add new place</button>
+                </a>
       </main>
     </Def>
   )
