@@ -19,21 +19,14 @@ app.get('/places', (req, res) => {
     city: 'Seattle',
     state: 'WA',
     cuisines: 'Thai, Pan-Asian',
-    pic: 'http://placekitten.com/250/250'
+    pic: 'images/seattle-cafe.jpg'
   }, {
     name: 'Coding Cat Cafe',
     city: 'Phoenix',
     state: 'AZ',
     cuisines: 'Coffee, Bakery',
-    pic: 'http://placekitten.com/250/250'
-  },
-  {
-    name: 'Bakery',
-    city: 'Glendale',
-    state: 'CA',
-    cuisines: 'Resaurant, Bakery',
-    pic: 'http://placekitten.com/g/200/300'
-  }]
+    pic: 'images/phoenix-cafe.jpg'
+  },]
 
 
   

@@ -1,29 +1,93 @@
 h1 {
-    text-align: center;
-    color: cornflowerblue;
-  }
-  
+  text-align: center;
+  color: cornflowerblue;
+}
 
-.button{
 
-background-color: lightblue;
-font-size: 30px;
-border-radius: 5px;
-border: none;
-box-shadow: 4px 4px 12px 1px;
+.button {
+
+  background-color: lightblue;
+  font-size: 30px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 4px 4px 12px 1px;
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+}
+
+.aTag {
+
+  text-decoration: none;
+
+
+}
+
+.strawberry_img {
+
+  width: 500px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.photo-by{
+
+text-align: center;
+
+}
+
+.main-Div{
+
 display: flex;
-padding-left: 15px;
-padding-right: 15px;
-margin-left: auto;
-margin-right: auto;
-margin-top: 50px;
-margin-bottom: 50px;
+flex-direction: column;
+justify-content: flex-end;
 
-}  
 
-.aTag{
 
-text-decoration: none;
+}
 
+.dog-pic-404{
+
+width: 350px;
+
+
+
+}
+
+.div-404 {
+
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.places-div{
+
+  grid-row: inherit;
+}
+
+.place-images{
+
+  
+ height: 340px;
+ width: 450px;
+ 
+
+
+
+}
+
+.grid-row{
+
+display: grid;
+grid-template-columns: auto auto auto;
+justify-content: center;
 
 }
