@@ -1,23 +1,46 @@
 const React = require('react')
 const Def = require('../default')
 
-function new_form () {
+function new_form() {
 
 
-    return (
-      <Def>
-       
-            <head>
+  return (
+    <Def>
 
-              <link rel="stylesheet" href="public/css/addPages.css"/>
-            </head>
-            <body>
-          
-              <h1>Add new Place</h1>
-        
-            </body>
-      </Def>
-    )
-  }
+      <head>
+
+      </head>
+      <body>
+
+        <h1>Add new Place</h1>
+        <form method="POST" action="/places">
+  <div className="form-group">
+    <label htmlFor="name">Place Name</label>
+    <input className="form-control" id="name" name="name" required />
+  </div>
+  <div className="form-group">
+    <label htmlFor="pic">Place Picture</label>
+    <input className="form-control" id="pic" name="pic" />
+  </div>
+  <div className="form-group">
+    <label htmlFor="city">City</label>
+    <input className="form-control" id="city" name="city" />
+  </div>
+  <div className="form-group">
+    <label htmlFor="state">State</label>
+    <input className="form-control" id="state" name="state" />
+  </div>
+  <div className="form-group">
+    <label htmlFor="cuisines">Cuisines</label>
+    <input className="form-control" id="cuisines" name="cuisines" required />
+  </div>
+  <input className="btn btn-primary" type="submit" value="Add Place" />
+</form>
+
+
+      </body>
+    </Def>
+  )
+}
 
 module.exports = new_form
