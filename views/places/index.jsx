@@ -14,7 +14,7 @@ function index(data) {
             <h2> <a href={`/places/${index}`}>{place.name}</a> </h2>
             <p> {place.cuisines}</p>
              <div className="picture-div">
-               <img className="place-images" src={place.pic} alt={place.name} />
+               <a href={`/places/${index}`}><img className="place-images" src={place.pic} alt={place.name}/></a> 
              </div>
             <p>Located in {place.city}</p>
           </div>
@@ -31,7 +31,7 @@ function index(data) {
   return (
     <Def>
       <head>
-
+      <title>Places</title>
       </head>
       <main>
         <div className="places-div">

@@ -8,9 +8,11 @@ function new_form() {
     <Def>
 
       <head>
-      <link rel="stylesheet" href="public/css/style.css" />
+      <link rel="stylesheet" href="/css/style.css" />
 
+      <title>Add places</title>
       </head>
+
       <body>
 
         <h1>Add new Place</h1>

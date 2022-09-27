@@ -6,7 +6,7 @@ function error404() {
   return (
     <Def>
       <head>
-        <link rel="stylesheet" href="/public/css/style.css" />
+        <link rel="stylesheet" href="/css/style.css" />
       </head>
       <main>
 
