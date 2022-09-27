@@ -23,6 +23,7 @@ router.post('/', (req, res) => {
   if (!req.body.state) {
     req.body.state = 'USA'
   }
+ 
   places.push(req.body) // push to the array
   res.redirect('/places') // after you have added a new place with the POST route, we can redirect to the index route to see our newly added place!
 })

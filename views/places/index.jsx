@@ -8,10 +8,6 @@ function index(data) {
 
   let placesFormatted = data.places.map(function (place) {
     return (
-
-
-
-
       <div className="container">
         <div className="row">
           <div className="col">   <h2>{place.name}</h2>
@@ -47,6 +43,9 @@ function index(data) {
                 </a>
                 <a href="/places/new" className="aTag">
                 <button type="button" className="button">Add new place</button>
+                </a>
+                <a href="/" className="aTag">
+                <button type="button" className="button">Home</button>
                 </a>
       </main>
     </Def>
