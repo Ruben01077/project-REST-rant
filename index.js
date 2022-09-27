@@ -16,7 +16,6 @@ app.use(express.urlencoded({ extended: true })) // This tool is now included sta
 // app.use('/places', require('./controllers/places'))
 
 
-
 app.use('/places', require("./controllers/places"))
 
 
@@ -25,9 +24,11 @@ app.get('/', (req, res) => {
   res.render('home')
 })
 
+
 app.get('*', (req, res) => {
   res.render('error404')
 })
+
 
 
 
