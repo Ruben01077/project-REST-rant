@@ -30,7 +30,7 @@ router.get('/:id', (req, res) => {
 
 
 
-
+// CREATE
 router.post('/', (req, res) => {
   console.log(req.body)
   if (!req.body.pic) {
@@ -48,6 +48,8 @@ router.post('/', (req, res) => {
   res.redirect('/places') // after you have added a new place with the POST route, we can redirect to the index route to see our newly added place!
 })
 
+
+//DELETE
 router.delete('/:id', (req, res) => {
   let id = Number(req.params.id)
   if (isNaN(id)) {
@@ -59,6 +61,20 @@ router.delete('/:id', (req, res) => {
   else {
     places.splice(id, 1)
     res.redirect('/places')
+  }
+})
+
+// EDIT
+router.get('/:id/edit', (req, res) => {
+  let id = Number(req.params.id)
+  if (isNaN(id)) {
+      res.render('error404')
+  }
+  else if (!places[id]) {
+      res.render('error404')
+  }
+  else {
+    res.render('places/edit', { place: places[id] })
   }
 })
 

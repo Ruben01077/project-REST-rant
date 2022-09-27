@@ -38,7 +38,7 @@ function show(data) {
 
                 </div>
 
-                <div>
+                <div className='editDeleteDiv'>
 
                     <a href={`/places/${data.id}/edit`} className="btn btn-warning">
                         Edit

@@ -45,3 +45,16 @@ width: 500px;
    margin-top: 50px;
 
 }
+
+.editDeleteDiv{
+position: relative;
+display: inline-flex;
+left: 25%;
+margin-top: 20px;
+}
+
+.btn-warning{
+
+margin-right: 15px;
+
+}
