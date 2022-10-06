@@ -6,15 +6,15 @@ const Def = require("../default")
 
 function index(data) {
 
-  let placesFormatted = data.places.map(function (place, index) {
+  let placesFormatted = data.places.map(function (place) {
     return (
       <div className="container">
         <div className="row">
           <div className="col">   
-            <h2> <a href={`/places/${index}`}>{place.name}</a> </h2>
+            <h2> <a href={`/places/${place.id}`}>{place.name}</a> </h2>
             <p> {place.cuisines}</p>
              <div className="picture-div">
-               <a href={`/places/${index}`}><img className="place-images" src={place.pic} alt={place.name}/></a> 
+               <a href={`/places/${place.id}`}><img className="place-images" src={place.pic} alt={place.name}/></a> 
              </div>
             <p>Located in {place.city}</p>
           </div>
