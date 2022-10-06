@@ -1,9 +1,35 @@
 const React = require('react');
+const comment = require('../../models/comment');
 const Def = require("../default");
 
 function show(data) {
 
-     
+    let commetns = (
+        <h3 className='inactive'>
+            No Comments yet!
+        </h3>
+    )
+    if (data.place.comments.length) {
+
+        commetns = data.place.comments.map(c => {
+
+            return (
+
+                <div className="border">
+                    <h2 className="rant">{c.rant ? 'Rant! ðŸ˜¡' : 'Rave! ðŸ˜»'}</h2>
+                    <h4>{c.content}</h4>
+                    <h3>
+                        <stong>- {c.author}</stong>
+                    </h3>
+                    <h4>Rating: {c.stars}</h4>
+                </div>
+
+            )
+
+        })
+
+    }
+
 
     return (
 
@@ -43,14 +69,14 @@ function show(data) {
                         <h4>
                             Serving {data.place.cuisines}
                         </h4>
+                           <h2>
+                            Comments
+                           </h2>
+                            {commetns}
                     </div>
 
                 </div>
-                <div className='commentDiv'>
-
-                    <input type="comment" className='commentInput' placeholder='Comments' />
-
-                </div>
+              
 
                 <div className='editDeleteDiv'>
 
@@ -80,8 +106,6 @@ function show(data) {
 
 
 module.exports = show
-
-
 
 
 
