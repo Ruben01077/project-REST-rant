@@ -3,6 +3,7 @@ const Def = require("../default");
 
 function show(data) {
 
+     
 
     return (
 
@@ -23,12 +24,25 @@ function show(data) {
 
                 <div className='mainDiv'>
                     <div className='leftDiv'>
-                        <img src={`${data.place.pic}`} alt="" />
+                        <img src={`${data.place.pic}`} alt={data.place.name} />
+                        <h3>
+                            Located in {data.place.city}, {data.place.state}
+                        </h3>
                     </div>
+
                     <div className='rightDiv'>
                         <h1>{data.place.name}</h1>
-                        <h5>City: {data.place.city}, {data.place.state}</h5>
-                        <h5>Cuisines: {data.place.cuisines}</h5>
+                        <h2 className='disc'>Rating</h2>
+                        {/* <h5>City: {data.place.city}, {data.place.state}</h5> */}
+                        {/* <h5>Cuisines: {data.place.cuisines}</h5> */}
+                        <h2 className='disc'>Description</h2>
+                        <h3>
+                            {data.place.showEstablished()}
+
+                        </h3>
+                        <h4>
+                            Serving {data.place.cuisines}
+                        </h4>
                     </div>
 
                 </div>
