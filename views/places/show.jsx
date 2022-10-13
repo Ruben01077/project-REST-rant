@@ -4,14 +4,29 @@ const Def = require("../default");
 
 function show(data) {
 
-    let commetns = (
+    let comments = (
         <h3 className='inactive'>
             No Comments yet!
         </h3>
     )
+    let rating = (
+        <h3 className='inactive'>
+            Not yet rated
+        </h3>
+    )
     if (data.place.comments.length) {
+        
+let sumRatings = data.place.comments.reduce((tot, c) => {
+    return tot + c.stars
+}, 0)
 
-        commetns = data.place.comments.map(c => {
+let averageRating = sumRating / data.place.comments.length
+rating = (
+    <h3>{averageRating} stars</h3>
+)
+
+
+        comments = data.place.comments.map(c => {
 
             return (
 
@@ -59,8 +74,8 @@ function show(data) {
                     <div className='rightDiv'>
                         <h1>{data.place.name}</h1>
                         <h2 className='disc'>Rating</h2>
-                        {/* <h5>City: {data.place.city}, {data.place.state}</h5> */}
-                        {/* <h5>Cuisines: {data.place.cuisines}</h5> */}
+                        {rating}
+                        <br />
                         <h2 className='disc'>Description</h2>
                         <h3>
                             {data.place.showEstablished()}
@@ -72,7 +87,9 @@ function show(data) {
                            <h2>
                             Comments
                            </h2>
-                            {commetns}
+                            {comments}
+                            <label for="customRange1" class="form-label">Example range</label>
+<input type="range" class="form-range" id="customRange1"></input>
                     </div>
 
                 </div>
@@ -106,6 +123,11 @@ function show(data) {
 
 
 module.exports = show
+
+
+
+
+
 
 
 
